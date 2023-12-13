@@ -1,16 +1,21 @@
-const express = require("express");
-const app = express();
-const port = 8000;
-const apiRouter = require("./api-routes")
+// Index.js
+const express = require('express');
+const dataSiswa = require('./datasiswa'); // Import dataSiswa dari file DataSiswa.js
 
-app.get("/", (req, res) => {
-  res.send("hello , Selamat anda telah berhasil membuat server dengan express");
+const app = express();
+const port = 8080;
+
+// Rute utama
+app.get('/', (req, res) => {
+  res.send('Selamat Datang Di Data Center Siswa Indonesia');
 });
 
-app.use ("/api" , apiRouter);
+// Rute /DataSiswa
+app.get('/DataSiswa', (req, res) => {
+  res.json(dataSiswa);
+});
 
-
-
+// Menjalankan server
 app.listen(port, () => {
-   console.log|(`server berjalan di port ${port}`);
+  console.log(`Server berjalan di http://localhost:${port}`);
 });
