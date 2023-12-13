@@ -1,11 +1,14 @@
 {
-  "name": "testreviewjavascript",
+  "name": "resthub2",
   "version": "1.0.0",
-  "description": "",
+  "description": "rest api CRUD",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "idha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
